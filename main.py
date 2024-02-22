@@ -1,3 +1,6 @@
+# pylint: disable=line-too-long
+# pylint: disable=missing-docstring
+
 import sys
 from calculator import Calculator
 from decimal import Decimal, InvalidOperation
@@ -35,4 +38,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
