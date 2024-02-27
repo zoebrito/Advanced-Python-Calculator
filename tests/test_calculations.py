@@ -9,13 +9,14 @@ Tests for calculations.py
 # Import the Calculation class from the calculator package to test its functionality.
 # Import the arithmetic operation functions (add, subtract, multiply, divide) to be tested.
 # pylint: disable=unnecessary-dunder-call, invalid-name
+# pylint: disable=unused-import
 
 from decimal import Decimal
 import pytest
 from calculator.calculations import Calculation
 from calculator.operations import add, subtract, multiply, divide
 
-def test_calculation_operations(a, b, operation, expected):
+def test_calculation_operations(first_num, second_num, operation, expected):
     """
     Test calculation operations with various scenarios.
     
@@ -29,8 +30,8 @@ def test_calculation_operations(a, b, operation, expected):
         operation (function): The arithmetic operation to perform.
         expected (Decimal): The expected result of the operation.
     """
-    calc = Calculation(a, b, operation)  # Create a Calculation instance with the provided operands and operation.
-    assert calc.perform() == expected, f"Failed {operation.__name__} operation with {a} and {b}"  # Perform the operation and assert that the result matches the expected value.
+    calc = Calculation(first_num, second_num, operation)  # Create a Calculation instance with the provided operands and operation.
+    assert calc.perform() == expected, f"Failed {operation.__name__} operation with {first_num} and {second_num}"  # Perform the operation and assert that the result matches the expected value.
 
 def test_calculation_repr():
     """
