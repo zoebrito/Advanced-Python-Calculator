@@ -3,12 +3,12 @@
 from decimal import Decimal
 import pytest
 from calculator.calculations import Calculation
-from calculator.operations import add, subtract, multiply, divide
+from calculator.operations import divide
 
 @pytest.mark.filterwarnings("ignore:.*invalid-name.*")
-def test_operation(a, b, operation, expected):
+def test_operation(first_num, second_num, operation, expected):
     '''Testing various operations'''
-    calculation = Calculation.create(a, b, operation)
+    calculation = Calculation.create(first_num, second_num, operation)
     assert calculation.perform() == expected, f"{operation.__name__} operation failed"
 
 # Keeping the divide by zero test as is since it tests a specific case
