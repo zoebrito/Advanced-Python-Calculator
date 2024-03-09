@@ -1,5 +1,5 @@
 # pylint: disable=missing-module-docstring
-from app import App
+from app.app import App
 
 def main():
     app = App()
