@@ -1,5 +1,5 @@
-# Calculator App with Command Pattern and REPL
+# Calculator App with Plugin Architecture
 
-Updating previous calculator project utilizing command pattern and REPL interface
-- Organized in an "app" folder instead
-- Using command-based interaction
+Plugin architecture for the calculator app for easy addition of new commands
+
+- Automatically loads plugins from the "plugins" directory
