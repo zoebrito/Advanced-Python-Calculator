@@ -1,5 +1,6 @@
-# Calculator App with Plugin Architecture
+# Calcuator App: Enhanced Functionality
 
-Plugin architecture for the calculator app for easy addition of new commands
-
-- Automatically loads plugins from the "plugins" directory
+Previous project reworked to include the following:
+- Automated Testing with GitHub Actions
+- Environment Variables
+- Logging
