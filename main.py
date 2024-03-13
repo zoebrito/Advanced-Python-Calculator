@@ -1,4 +1,6 @@
+# pylint: disable=missing-function-docstring
 # pylint: disable=missing-module-docstring
+
 from app.app import App
 
 def main():

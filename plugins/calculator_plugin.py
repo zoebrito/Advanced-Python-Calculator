@@ -1,4 +1,7 @@
 # app/plugins/calculator_plugin.py
+# pylint: disable=missing-module-docstring
+# pylint: disable=missing-function-docstring
+# pylint: disable=missing-class-docstring
 
 from plugin_interface import PluginInterface
 

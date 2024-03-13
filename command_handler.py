@@ -1,4 +1,7 @@
 # command_handler.py
+# pylint: disable=missing-module-docstring
+# pylint: disable=missing-function-docstring
+# pylint: disable=missing-class-docstring
 
 class CommandHandler:
     def __init__(self):

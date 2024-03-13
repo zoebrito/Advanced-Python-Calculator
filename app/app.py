@@ -1,8 +1,13 @@
 # app/app.py
+# pylint: disable=missing-module-docstring
+# pylint: disable=missing-function-docstring
+# pylint: disable=missing-class-docstring
+# pylint: disable=line-too-long
 
 import os
 import logging
 import logging.config
+import sys
 from command_handler import CommandHandler
 from plugin_interface import PluginInterface
 from plugins.calculator_plugin import CalculatorPlugin
@@ -14,7 +19,32 @@ class App:
         self.load_plugins()
 
     def setup_logging(self):
-        logging.config.fileConfig('logging.conf')  # Load logging configuration from logging.conf file
+        # Create a logger
+        logger = logging.getLogger()
+        logger.setLevel(logging.DEBUG)
+
+        # Create a formatter
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+
+        # Create a console handler
+        console_handler = logging.StreamHandler(sys.stdout)
+        console_handler.setLevel(logging.DEBUG)
+        console_handler.setFormatter(formatter)
+
+        # Create a file handler
+        file_handler = logging.FileHandler('app.log')
+        file_handler.setLevel(logging.DEBUG)
+        file_handler.setFormatter(formatter)
+
+        # Add handlers to the logger
+        logger.addHandler(console_handler)
+        logger.addHandler(file_handler)
+
+        # Log a test message
+        logger.info('Logging initialized')
+
+        # Optionally, set the root logger level
+        # logging.root.setLevel(logging.DEBUG)
 
     def load_plugins(self):
         plugins_dir = "plugins"
