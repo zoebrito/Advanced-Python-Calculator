@@ -1,14 +1,20 @@
-# app.py
+# app/app.py
 
+import os
+import logging
+import logging.config
 from command_handler import CommandHandler
 from plugin_interface import PluginInterface
 from plugins.calculator_plugin import CalculatorPlugin
-import os
 
 class App:
     def __init__(self):
+        self.setup_logging()  # Call the setup_logging method to configure logging
         self.command_handler = CommandHandler()
         self.load_plugins()
+
+    def setup_logging(self):
+        logging.config.fileConfig('logging.conf')  # Load logging configuration from logging.conf file
 
     def load_plugins(self):
         plugins_dir = "plugins"
