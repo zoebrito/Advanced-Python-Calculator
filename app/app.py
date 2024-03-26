@@ -6,17 +6,18 @@
 
 import os
 import logging
-import logging.config
 import sys
 from command_handler import CommandHandler
 from plugin_interface import PluginInterface
 from plugins.calculator_plugin import CalculatorPlugin
+from history_manager import HistoryManager
 
 class App:
     def __init__(self):
         self.setup_logging()  # Call the setup_logging method to configure logging
         self.command_handler = CommandHandler()
         self.load_plugins()
+        self.history_manager = HistoryManager()
 
     def setup_logging(self):
         # Create a logger
@@ -43,9 +44,6 @@ class App:
         # Log a test message
         logger.info('Logging initialized')
 
-        # Optionally, set the root logger level
-        # logging.root.setLevel(logging.DEBUG)
-
     def load_plugins(self):
         plugins_dir = "plugins"
         if os.path.exists(plugins_dir) and os.path.isdir(plugins_dir):
@@ -67,12 +65,21 @@ class App:
             if command_name == 'exit':
                 print("Exiting program.")
                 break
-            try:
-                args = [float(arg) for arg in user_input[1:]]
-                result = self.command_handler.execute_command(command_name, args)
-                print("Result:", result)
-            except ValueError:
-                print("Invalid input. Please enter numbers.")
+            elif command_name == 'history':
+                self.history_manager.print_history()
+            elif command_name == 'remove':
+                if len(user_input) != 2 or not user_input[1].isdigit():
+                    print("Usage: remove <index>")
+                else:
+                    index = int(user_input[1])
+                    self.history_manager.remove_calculation(index)
+            else:
+                try:
+                    args = [float(arg) for arg in user_input[1:]]
+                    result = self.command_handler.execute_command(command_name, args)
+                    print("Result:", result)
+                except ValueError:
+                    print("Invalid input. Please enter numbers.")
 
 if __name__ == "__main__":
     app = App()
