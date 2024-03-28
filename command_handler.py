@@ -15,3 +15,6 @@ class CommandHandler:
             return self.commands[name](args)
         else:
             return "Command not found"
+
+    def get_available_commands(self):
+       return list(self.commands.keys())
