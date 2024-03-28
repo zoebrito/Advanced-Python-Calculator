@@ -16,10 +16,11 @@ from history_manager import HistoryManager
 class App:
     def __init__(self):
         self.setup_logging()
+        print("Application started")
+        print("Available commands:")
         self.logger = logging.getLogger(__name__)  # Get the logger instance
         self.command_handler = CommandHandler()
         self.history_manager = HistoryManager()
-        self.command_handler.register_command("history", self.history_manager.print_history)
         self.load_plugins()
         self.logger.info("Application started")
         self.logger.info("Available commands:")
@@ -67,7 +68,8 @@ class App:
     def register_commands(self):
         # Register the history command
         self.command_handler.register_command("history", self.history_manager.print_history)
-    
+        self.command_handler.register_command("clear", self.history_manager.clear_history)
+
     def start(self):
         while True:
             user_input = input(">>> ").strip().split()
@@ -75,22 +77,27 @@ class App:
             if command_name == 'exit':
                 self.logger.info("Exiting program.")
                 break
-            elif command_name == 'history':  # Check for history command
+            elif command_name == 'history':
                 self.history_manager.print_history()
-                continue
-            try:
-                args = [float(arg) for arg in user_input[1:]]
-                result = self.command_handler.execute_command(command_name, args)
-                log_message = f"User input: {user_input}, Result: {result}"
-                self.logger.info(log_message)
-                print("Result:", result)  # Print result to console
-                # Save the calculation to history
-                self.history_manager.save_history(user_input + [result])
-            except ValueError:
-                self.logger.error("Invalid input. Please enter numbers.")
+            elif command_name == 'clear':
+                self.history_manager.clear_history()  # Call clear_history method
+                self.logger.info("Calculation history cleared.")
+                print("Calculation history cleared.")
+            else:
+                try:
+                    args = [float(arg) for arg in user_input[1:]]
+                    result = self.command_handler.execute_command(command_name, args)
+                    log_message = f"User input: {user_input}, Result: {result}"
+                    self.logger.info(log_message)
+                    print("Result:", result)
+                    self.history_manager.save_history(user_input + [result])
+                except ValueError:
+                    self.logger.error("Invalid input. Please enter numbers.")
 
     def print_available_commands(self):
         available_commands = self.command_handler.get_available_commands()
+        available_commands.append("history")  # Add history command
+        available_commands.append("clear")  # Add clear command
         for command in available_commands:
             self.logger.info(f"- {command}")
             print(f"- {command}")
