@@ -2,7 +2,6 @@
 # pylint: disable=missing-function-docstring
 # pylint: disable=line-too-long
 
-import logging
 from unittest.mock import patch
 from app.app import App
 
@@ -14,28 +13,26 @@ def test_app_start(caplog):
     def mock_input(prompt):
         return mock_inputs.pop(0)
 
-    # Initialize the App with mock input
+    # Create an instance of the App class
     app = App()
 
     # Start the app and capture the output
     output = []
     with patch('builtins.input', side_effect=mock_input):
         with patch('builtins.print', side_effect=lambda *args, **kwargs: output.append(" ".join(map(str, args)))):
-            with caplog.at_level(logging.DEBUG):  # Capture log messages
-                app.start()
-
-    # Check if the program exited
-    assert "Exiting program." in output
+            app.start()
 
     # Assertions
     expected_output = [
-        "Type 'exit' to exit.",
         "Result: 5.0",
         "Result: 3.0",
         "Result: 12.0",
         "Result: 5.0"
     ]
-    assert output[:-1] == expected_output
+    assert output == expected_output
 
     # Check log messages
-    assert any(record.levelname == "INFO" and "Logging initialized" in record.message for record in caplog.records)
+    assert any("Logging initialized" in record.message for record in caplog.records)
+    assert any("Application started" in record.message for record in caplog.records)
+    assert any("Available commands" in record.message for record in caplog.records)
+    assert any("Exiting program." in record.message for record in caplog.records)
