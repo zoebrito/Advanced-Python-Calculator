@@ -13,8 +13,7 @@ class CommandHandler:
     def execute_command(self, name, args):
         if name in self.commands:
             return self.commands[name](args)
-        else:
-            return "Command not found"
+        return "Command not found"
 
     def get_available_commands(self):
-       return list(self.commands.keys())
+        return list(self.commands.keys())
