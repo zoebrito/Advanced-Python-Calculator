@@ -11,12 +11,15 @@ import sys
 from command_handler import CommandHandler
 from plugin_interface import PluginInterface
 from plugins.calculator_plugin import CalculatorPlugin
+from history_manager import HistoryManager
 
 class App:
     def __init__(self):
         self.setup_logging()
         self.logger = logging.getLogger(__name__)  # Get the logger instance
         self.command_handler = CommandHandler()
+        self.history_manager = HistoryManager()
+        self.command_handler.register_command("history", self.history_manager.print_history)
         self.load_plugins()
         self.logger.info("Application started")
         self.logger.info("Available commands:")
@@ -36,8 +39,14 @@ class App:
         file_handler.setLevel(logging.DEBUG)
         file_handler.setFormatter(formatter)
 
-        # Add handler to the logger
+        # Remove the default console handler
+        self.logger.handlers = []
+
+        # Add file handler to the logger
         self.logger.addHandler(file_handler)
+
+        # Set the logging level to WARNING for the logger
+        self.logger.setLevel(logging.WARNING)
 
         # Log a test message
         self.logger.info('Logging initialized')
@@ -55,6 +64,10 @@ class App:
                         plugin_instance = plugin_class()
                         plugin_instance.register_commands(self.command_handler)
 
+    def register_commands(self):
+        # Register the history command
+        self.command_handler.register_command("history", self.history_manager.print_history)
+    
     def start(self):
         while True:
             user_input = input(">>> ").strip().split()
@@ -62,12 +75,17 @@ class App:
             if command_name == 'exit':
                 self.logger.info("Exiting program.")
                 break
+            elif command_name == 'history':  # Check for history command
+                self.history_manager.print_history()
+                continue
             try:
                 args = [float(arg) for arg in user_input[1:]]
                 result = self.command_handler.execute_command(command_name, args)
                 log_message = f"User input: {user_input}, Result: {result}"
                 self.logger.info(log_message)
                 print("Result:", result)  # Print result to console
+                # Save the calculation to history
+                self.history_manager.save_history(user_input + [result])
             except ValueError:
                 self.logger.error("Invalid input. Please enter numbers.")
 
