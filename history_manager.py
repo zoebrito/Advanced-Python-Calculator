@@ -42,12 +42,13 @@ class HistoryManager:
     def print_history(self):
         history = self.load_history()
         if history:
-            logging.info("Calculation history:")
-            for idx, calculation in enumerate(history, 1):
-                logging.info("%d. Calculation: %s", idx, calculation)
+            print("Calculation history:")
+            for idx, record in enumerate(history, 1):
+                command, *operands, result = record
+                user_input = f"{command} {' '.join(operands)}"
+                print(f"{idx}. User input: {user_input}, Result: {result}")
         else:
-            logging.info("No calculation history available.")
-
+            print("No calculation history available.")
 
     def clear_history(self):
         if os.path.exists(self.history_file_path):
