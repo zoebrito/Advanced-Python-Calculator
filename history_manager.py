@@ -13,36 +13,35 @@ class HistoryManager:
 
     def load_history(self):
         if os.path.exists(self.history_file_path):
-            logging.info(f"Loading calculation history from {self.history_file_path}")
-            with open(self.history_file_path, 'r', newline='') as csvfile:
+            logging.info("Loading calculation history from %s", self.history_file_path)
+            with open(self.history_file_path, 'r', newline='', encoding='utf-8') as csvfile:
                 reader = csv.reader(csvfile)
                 history = list(reader)
             return history
-        else:
-            logging.warning("No calculation history found.")
-            return []
+        logging.warning("No calculation history found.")
+        return []
 
     def save_history(self, history):
-        with open(self.history_file_path, 'w', newline='') as csvfile:
+        with open(self.history_file_path, 'w', newline='', encoding='utf-8') as csvfile:
             writer = csv.writer(csvfile)
             for row in history:
                 writer.writerow(row)
-        logging.info(f"Calculation history saved to {self.history_file_path}")
+        logging.info("Calculation history saved to %s", self.history_file_path)
 
     def print_history(self):
         history = self.load_history()
         if history:
             logging.info("Calculation history:")
             for idx, row in enumerate(history, 1):
-                logging.info(f"{idx}. {row}")
+                logging.info("%d. %s", idx, row)
         else:
             logging.info("No calculation history available.")
 
     def remove_calculation(self, index):
         history = self.load_history()
-        if history and index >= 1 and index <= len(history):
+        if history and 1 <= index <= len(history):
             removed_calculation = history.pop(index - 1)
             self.save_history(history)
-            logging.info(f"Calculation {removed_calculation} removed from history.")
+            logging.info("Calculation %s removed from history.", removed_calculation)
         else:
             logging.warning("Invalid index or no calculation history available.")
