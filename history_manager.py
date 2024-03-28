@@ -10,38 +10,48 @@ import csv
 class HistoryManager:
     def __init__(self):
         self.history_file_path = os.path.abspath("history.csv")
+        try:
+            open(self.history_file_path, 'a').close()  # Create the file if it doesn't exist
+        except Exception as e:
+            logging.error("Error creating history file: %s", e)
 
     def load_history(self):
-        if os.path.exists(self.history_file_path):
-            logging.info("Loading calculation history from %s", self.history_file_path)
-            with open(self.history_file_path, 'r', newline='', encoding='utf-8') as csvfile:
-                reader = csv.reader(csvfile)
-                history = list(reader)
-            return history
-        logging.warning("No calculation history found.")
-        return []
+        history = []
+        try:
+            if os.path.exists(self.history_file_path):
+                logging.info("Loading calculation history from %s", self.history_file_path)
+                with open(self.history_file_path, 'r', newline='', encoding='utf-8') as csvfile:
+                    reader = csv.reader(csvfile)
+                    history = list(reader)
+                logging.info("Calculation history loaded successfully")
+            else:
+                logging.warning("No calculation history found.")
+        except Exception as e:
+            logging.error("Error loading calculation history: %s", e)
+        return history
 
-    def save_history(self, history):
-        with open(self.history_file_path, 'w', newline='', encoding='utf-8') as csvfile:
-            writer = csv.writer(csvfile)
-            for row in history:
-                writer.writerow(row)
-        logging.info("Calculation history saved to %s", self.history_file_path)
+    def save_history(self, calculation):
+        try:
+            with open(self.history_file_path, 'a', newline='', encoding='utf-8') as csvfile:
+                writer = csv.writer(csvfile)
+                writer.writerow(calculation)
+            logging.info("Calculation saved to history.")
+        except Exception as e:
+            logging.error("Error saving calculation to history: %s", e)
 
     def print_history(self):
         history = self.load_history()
         if history:
             logging.info("Calculation history:")
-            for idx, row in enumerate(history, 1):
-                logging.info("%d. %s", idx, row)
+            for idx, calculation in enumerate(history, 1):
+                logging.info("%d. Calculation: %s", idx, calculation)
         else:
             logging.info("No calculation history available.")
 
-    def remove_calculation(self, index):
-        history = self.load_history()
-        if history and 1 <= index <= len(history):
-            removed_calculation = history.pop(index - 1)
-            self.save_history(history)
-            logging.info("Calculation %s removed from history.", removed_calculation)
+
+    def clear_history(self):
+        if os.path.exists(self.history_file_path):
+            os.remove(self.history_file_path)
+            logging.info("Calculation history cleared.")
         else:
-            logging.warning("Invalid index or no calculation history available.")
+            logging.info("No calculation history found to clear.")
