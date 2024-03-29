@@ -13,7 +13,7 @@ class TestApp(unittest.TestCase):
         mock_inputs = ["add 2 3", "subtract 5 2", "multiply 3 4", "divide 10 2", "exit"]
 
         # Mock input function to return predefined inputs
-        def mock_input(prompt):
+        def mock_input(_):
             return mock_inputs.pop(0)
 
         # Create an instance of the App class
