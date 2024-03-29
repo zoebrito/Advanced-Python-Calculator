@@ -9,7 +9,6 @@ import logging
 from dotenv import load_dotenv
 from command_handler import CommandHandler
 from plugin_interface import PluginInterface
-from plugins.calculator_plugin import CalculatorPlugin
 
 class App:
     def __init__(self):
@@ -30,7 +29,7 @@ class App:
 
         # Create a 'logs' directory if it doesn't exist
         os.makedirs('logs', exist_ok=True)
-        
+
         # Configure logging
         logging.basicConfig(
             level=os.getenv('LOG_LEVEL', 'INFO'),  # Default to INFO level if LOG_LEVEL is not provided
@@ -58,16 +57,15 @@ class App:
             if command_name == 'exit':
                 self.logger.info("Exiting program.")
                 break
-            else:
-                try:
-                    args = [float(arg) for arg in user_input[1:]]
-                    result = self.command_handler.execute_command(command_name, args)
-                    log_message = f"User input: {user_input}, Result: {result}"
-                    self.logger.info(log_message)
-                    if result is not None:
-                        print("Result:", result)
-                except ValueError:
-                    self.logger.error("Invalid input. Please enter numbers.")
+            try:
+                args = [float(arg) for arg in user_input[1:]]
+                result = self.command_handler.execute_command(command_name, args)
+                log_message = f"User input: {user_input}, Result: {result}"
+                self.logger.info(log_message)
+                if result is not None:
+                    print("Result:", result)
+            except ValueError:
+                self.logger.error("Invalid input. Please enter numbers.")
 
     def print_available_commands(self):
         available_commands = self.command_handler.get_available_commands()
