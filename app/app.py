@@ -70,7 +70,7 @@ class App:
     def print_available_commands(self):
         available_commands = self.command_handler.get_available_commands()
         for command in available_commands:
-            self.logger.info(f"- {command}")
+            self.logger.info("- %s", command)
             print(f"- {command}")
 
 if __name__ == "__main__":
