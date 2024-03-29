@@ -5,54 +5,70 @@
 
 import os
 import logging
-import csv
+import pandas as pd
 
 class HistoryManager:
     def __init__(self):
+        self._initialize()
+
+    def _initialize(self):
         self.history_file_path = os.path.abspath("history.csv")
-        try:
-            open(self.history_file_path, 'a').close()  # Create the file if it doesn't exist
-        except Exception as e:
-            logging.error("Error creating history file: %s", e)
+        if not os.path.exists(self.history_file_path):
+            try:
+                open(self.history_file_path, 'a').close()  # Create the file if it doesn't exist
+            except OSError as e:
+                logging.error("Error creating history file: %s", e)
 
     def load_history(self):
-        history = []
         try:
             if os.path.exists(self.history_file_path):
                 logging.info("Loading calculation history from %s", self.history_file_path)
-                with open(self.history_file_path, 'r', newline='', encoding='utf-8') as csvfile:
-                    reader = csv.reader(csvfile)
-                    history = list(reader)
+                history_df = pd.read_csv(self.history_file_path)
                 logging.info("Calculation history loaded successfully")
             else:
                 logging.warning("No calculation history found.")
+                return pd.DataFrame(columns=["Command", "Operands", "Result"])
         except Exception as e:
             logging.error("Error loading calculation history: %s", e)
-        return history
+            return pd.DataFrame(columns=["Command", "Operands", "Result"])
+        return history_df
 
     def save_history(self, calculation):
         try:
-            with open(self.history_file_path, 'a', newline='', encoding='utf-8') as csvfile:
-                writer = csv.writer(csvfile)
-                writer.writerow(calculation)
+            command, *operands, result = calculation
+            new_row = {"Command": command, "Operands": ' '.join(map(str, operands)), "Result": result}
+            if os.path.exists(self.history_file_path):
+                history_df = self.load_history()
+                history_df = pd.concat([history_df, pd.DataFrame([new_row])], ignore_index=True)
+            else:
+                history_df = pd.DataFrame([new_row])
+            history_df.to_csv(self.history_file_path, index=False)
             logging.info("Calculation saved to history.")
         except Exception as e:
             logging.error("Error saving calculation to history: %s", e)
 
     def print_history(self):
-        history = self.load_history()
-        if history:
+        history_df = self.load_history()
+        if not history_df.empty:
             print("Calculation history:")
-            for idx, record in enumerate(history, 1):
-                command, *operands, result = record
-                user_input = f"{command} {' '.join(operands)}"
-                print(f"{idx}. User input: {user_input}, Result: {result}")
+            for idx, row in history_df.iterrows():
+                command = row.get("Command", "")
+                operands = row.get("Operands", "")
+                result = row.get("Result", "")
+                print(f"{idx+1}. User input: {command} {operands}, Result: {result}")
         else:
             print("No calculation history available.")
 
     def clear_history(self):
-        if os.path.exists(self.history_file_path):
-            os.remove(self.history_file_path)
-            logging.info("Calculation history cleared.")
-        else:
-            logging.info("No calculation history found to clear.")
+        try:
+            if os.path.exists(self.history_file_path):
+                os.remove(self.history_file_path)
+                logging.info("Calculation history cleared.")
+                return "cleared"  # Return "cleared" after successfully clearing the history
+            else:
+                logging.info("No calculation history found to clear.")
+        except PermissionError:
+            logging.error("Permission denied to delete history file.")
+        except OSError as e:
+            logging.error("Error clearing calculation history: %s", e)
+        return None  # Return None if an error occurs
