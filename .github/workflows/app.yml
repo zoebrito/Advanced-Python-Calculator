@@ -24,4 +24,4 @@ jobs:
 
     - name: Run application
       run: |
-        echo "add 1 2" | python main.py
+        echo -e "add 1 2\nexit" | python main.py
