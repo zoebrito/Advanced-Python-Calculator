@@ -6,12 +6,9 @@
 
 import os
 import logging
-import logging.config
-import sys
 from command_handler import CommandHandler
 from plugin_interface import PluginInterface
 from plugins.calculator_plugin import CalculatorPlugin
-from history_manager import HistoryManager
 
 class App:
     def __init__(self):
@@ -20,7 +17,6 @@ class App:
         print("Available commands:")
         self.logger = logging.getLogger(__name__)  # Get the logger instance
         self.command_handler = CommandHandler()
-        self.history_manager = HistoryManager()
         self.load_plugins()
         self.logger.info("Application started")
         self.logger.info("Available commands:")
@@ -28,29 +24,23 @@ class App:
         print("Type 'exit' to exit.")
 
     def setup_logging(self):
-        # Create a logger
-        self.logger = logging.getLogger(__name__)
-        self.logger.setLevel(logging.DEBUG)
+        # Create a 'logs' directory if it doesn't exist
+        os.makedirs('logs', exist_ok=True)
+        
+        # Configure logging
+        logging.basicConfig(
+            level=logging.INFO,  # Default to INFO level
+            format='%(asctime)s - %(levelname)s - %(message)s',
+            handlers=[logging.FileHandler('logs/app.log')]
+        )
 
-        # Create a formatter
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-
-        # Create a file handler
-        file_handler = logging.FileHandler('app.log')
-        file_handler.setLevel(logging.DEBUG)
-        file_handler.setFormatter(formatter)
-
-        # Remove the default console handler
-        self.logger.handlers = []
-
-        # Add file handler to the logger
-        self.logger.addHandler(file_handler)
-
-        # Set the logging level to WARNING for the logger
-        self.logger.setLevel(logging.WARNING)
-
-        # Log a test message
-        self.logger.info('Logging initialized')
+        # Set log level based on environment variable, if provided
+        log_level = os.getenv('LOG_LEVEL')
+        if log_level:
+            numeric_level = getattr(logging, log_level.upper(), None)
+            if not isinstance(numeric_level, int):
+                raise ValueError('Invalid log level: %s' % log_level)
+            logging.getLogger().setLevel(numeric_level)
 
     def load_plugins(self):
         plugins_dir = "plugins"
@@ -65,11 +55,6 @@ class App:
                         plugin_instance = plugin_class()
                         plugin_instance.register_commands(self.command_handler)
 
-    def register_commands(self):
-        # Register the history command
-        self.command_handler.register_command("history", self.history_manager.print_history)
-        self.command_handler.register_command("clear", self.history_manager.clear_history)
-
     def start(self):
         while True:
             user_input = input(">>> ").strip().split()
@@ -77,27 +62,19 @@ class App:
             if command_name == 'exit':
                 self.logger.info("Exiting program.")
                 break
-            elif command_name == 'history':
-                self.history_manager.print_history()
-            elif command_name == 'clear':
-                self.history_manager.clear_history()  # Call clear_history method
-                self.logger.info("Calculation history cleared.")
-                print("Calculation history cleared.")
             else:
                 try:
                     args = [float(arg) for arg in user_input[1:]]
                     result = self.command_handler.execute_command(command_name, args)
                     log_message = f"User input: {user_input}, Result: {result}"
                     self.logger.info(log_message)
-                    print("Result:", result)
-                    self.history_manager.save_history(user_input + [result])
+                    if result is not None:
+                        print("Result:", result)
                 except ValueError:
                     self.logger.error("Invalid input. Please enter numbers.")
 
     def print_available_commands(self):
         available_commands = self.command_handler.get_available_commands()
-        available_commands.append("history")  # Add history command
-        available_commands.append("clear")  # Add clear command
         for command in available_commands:
             self.logger.info(f"- {command}")
             print(f"- {command}")

@@ -1,0 +1,40 @@
+2024-03-28 21:35:22,172 - INFO - Application started
+2024-03-28 21:35:22,172 - INFO - Available commands:
+2024-03-28 21:35:22,172 - INFO - - add
+2024-03-28 21:35:22,173 - INFO - - subtract
+2024-03-28 21:35:22,173 - INFO - - multiply
+2024-03-28 21:35:22,173 - INFO - - divide
+2024-03-28 21:35:22,173 - INFO - - history
+2024-03-28 21:35:22,173 - INFO - - clear
+2024-03-28 21:36:13,470 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-28 21:36:13,475 - INFO - Calculation history loaded successfully
+2024-03-28 21:36:13,479 - INFO - Calculation saved to history.
+2024-03-28 21:36:13,480 - INFO - User input: ['add', '4', '5'], Result: 9.0
+2024-03-28 21:37:58,658 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-28 21:37:58,661 - INFO - Calculation history loaded successfully
+2024-03-28 21:37:58,663 - INFO - User input: ['history'], Result: None
+2024-03-28 21:38:12,380 - INFO - Calculation history cleared.
+2024-03-28 21:38:12,381 - INFO - User input: ['clear'], Result: None
+2024-03-28 21:38:16,886 - INFO - Exiting program.
+2024-03-28 21:39:03,767 - INFO - Application started
+2024-03-28 21:39:03,767 - INFO - Available commands:
+2024-03-28 21:39:03,767 - INFO - - add
+2024-03-28 21:39:03,767 - INFO - - subtract
+2024-03-28 21:39:03,767 - INFO - - multiply
+2024-03-28 21:39:03,767 - INFO - - divide
+2024-03-28 21:39:03,767 - INFO - - history
+2024-03-28 21:39:03,767 - INFO - - clear
+2024-03-28 21:39:12,468 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-28 21:39:12,471 - ERROR - Error loading calculation history: No columns to parse from file
+2024-03-28 21:39:12,478 - INFO - Calculation saved to history.
+2024-03-28 21:39:12,478 - INFO - User input: ['add', '4', '5'], Result: 9.0
+2024-03-28 21:39:18,561 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-28 21:39:18,565 - INFO - Calculation history loaded successfully
+2024-03-28 21:39:18,568 - INFO - Calculation saved to history.
+2024-03-28 21:39:18,569 - INFO - User input: ['add', '6', '7'], Result: 13.0
+2024-03-28 21:39:28,756 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-28 21:39:28,758 - INFO - Calculation history loaded successfully
+2024-03-28 21:39:28,760 - INFO - User input: ['history'], Result: None
+2024-03-28 21:39:35,881 - INFO - Calculation history cleared.
+2024-03-28 21:39:35,881 - INFO - User input: ['clear'], Result: None
+2024-03-28 21:39:38,750 - INFO - Exiting program.
