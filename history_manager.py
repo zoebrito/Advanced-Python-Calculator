@@ -2,6 +2,7 @@
 # pylint: disable=missing-module-docstring
 # pylint: disable=missing-function-docstring
 # pylint: disable=missing-class-docstring
+# pylint: disable=line-too-long
 
 import os
 import logging
@@ -15,7 +16,8 @@ class HistoryManager:
         self.history_file_path = os.path.abspath("history.csv")
         if not os.path.exists(self.history_file_path):
             try:
-                open(self.history_file_path, 'a').close()  # Create the file if it doesn't exist
+                with open(self.history_file_path, 'a', encoding='utf-8'):  # Specify encoding
+                    pass  # Ensure file is created
             except OSError as e:
                 logging.error("Error creating history file: %s", e)
 
@@ -28,8 +30,11 @@ class HistoryManager:
             else:
                 logging.warning("No calculation history found.")
                 return pd.DataFrame(columns=["Command", "Operands", "Result"])
-        except Exception as e:
-            logging.error("Error loading calculation history: %s", e)
+        except FileNotFoundError as e:
+            logging.error("File not found: %s", e)
+            return pd.DataFrame(columns=["Command", "Operands", "Result"])
+        except pd.errors.EmptyDataError as e:
+            logging.error("Empty calculation history: %s", e)
             return pd.DataFrame(columns=["Command", "Operands", "Result"])
         return history_df
 
@@ -44,7 +49,7 @@ class HistoryManager:
                 history_df = pd.DataFrame([new_row])
             history_df.to_csv(self.history_file_path, index=False)
             logging.info("Calculation saved to history.")
-        except Exception as e:
+        except (TypeError, ValueError) as e:
             logging.error("Error saving calculation to history: %s", e)
 
     def print_history(self):
@@ -64,11 +69,10 @@ class HistoryManager:
             if os.path.exists(self.history_file_path):
                 os.remove(self.history_file_path)
                 logging.info("Calculation history cleared.")
-                return "cleared"  # Return "cleared" after successfully clearing the history
-            else:
-                logging.info("No calculation history found to clear.")
-        except PermissionError:
-            logging.error("Permission denied to delete history file.")
+                return "cleared"
+            logging.info("No calculation history found to clear.")
+        except PermissionError as e:
+            logging.error("Permission denied to delete history file: %s", e)
         except OSError as e:
             logging.error("Error clearing calculation history: %s", e)
-        return None  # Return None if an error occurs
+        return None
