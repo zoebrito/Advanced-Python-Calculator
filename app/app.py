@@ -6,6 +6,7 @@
 
 import os
 import logging
+from dotenv import load_dotenv
 from command_handler import CommandHandler
 from plugin_interface import PluginInterface
 from plugins.calculator_plugin import CalculatorPlugin
@@ -24,23 +25,18 @@ class App:
         print("Type 'exit' to exit.")
 
     def setup_logging(self):
+        # Load environment variables from .env file
+        load_dotenv()
+
         # Create a 'logs' directory if it doesn't exist
         os.makedirs('logs', exist_ok=True)
         
         # Configure logging
         logging.basicConfig(
-            level=logging.INFO,  # Default to INFO level
+            level=os.getenv('LOG_LEVEL', 'INFO'),  # Default to INFO level if LOG_LEVEL is not provided
             format='%(asctime)s - %(levelname)s - %(message)s',
-            handlers=[logging.FileHandler('logs/app.log')]
+            handlers=[logging.FileHandler(os.getenv('LOG_FILE', 'logs/app.log'))]
         )
-
-        # Set log level based on environment variable, if provided
-        log_level = os.getenv('LOG_LEVEL')
-        if log_level:
-            numeric_level = getattr(logging, log_level.upper(), None)
-            if not isinstance(numeric_level, int):
-                raise ValueError('Invalid log level: %s' % log_level)
-            logging.getLogger().setLevel(numeric_level)
 
     def load_plugins(self):
         plugins_dir = "plugins"
