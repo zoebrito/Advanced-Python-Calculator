@@ -2,6 +2,28 @@
 
 This project is an advanced Python-based calculator application developed as a midterm assignment for a Software Engineering graduate course. The calculator integrates various professional software development practices, including clean and maintainable code, design patterns, logging, dynamic configuration via environment variables, data handling with Pandas, and a command-line interface for real-time user interaction.
 
+## Setup Instructions
+
+To run the calculator application locally, follow these steps:
+
+1. Clone the repository to your local machine.
+2. Ensure you have Python 3.x installed.
+3. Install the required dependencies by running `pip install -r requirements.txt`.
+4. Create a `.env` file in the root directory and configure the necessary environment variables (see `.env` for reference).
+5. Run the application by executing `python3 main.py` in your terminal.
+
+## Usage Examples
+
+Once the application is running, you can interact with the calculator using the command-line interface. Here are some usage examples:
+
+- To perform addition: `add 5 3`
+- To perform subtraction: `subtract 10 7`
+- To perform multiplication: `multiply 4 6`
+- To perform division: `divide 20 4`
+- To view calculation history: `history`
+- To clear calculation history: `clear`
+- To exit the application: `exit`
+
 ## Design Patterns
 
 The project utilizes several design patterns to ensure modular, scalable, and maintainable code. These include:
