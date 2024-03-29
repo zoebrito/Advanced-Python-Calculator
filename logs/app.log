@@ -38,3 +38,596 @@
 2024-03-28 21:39:35,881 - INFO - Calculation history cleared.
 2024-03-28 21:39:35,881 - INFO - User input: ['clear'], Result: None
 2024-03-28 21:39:38,750 - INFO - Exiting program.
+2024-03-28 22:17:34,345 - INFO - Application started
+2024-03-28 22:17:34,346 - INFO - Available commands:
+2024-03-28 22:17:34,346 - INFO - - add
+2024-03-28 22:17:34,346 - INFO - - subtract
+2024-03-28 22:17:34,346 - INFO - - multiply
+2024-03-28 22:17:34,346 - INFO - - divide
+2024-03-28 22:17:34,346 - INFO - - history
+2024-03-28 22:17:34,346 - INFO - - clear
+2024-03-28 22:17:52,218 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-28 22:17:52,222 - INFO - Calculation history loaded successfully
+2024-03-28 22:17:52,227 - INFO - Calculation saved to history.
+2024-03-28 22:17:52,227 - INFO - User input: ['add', '4', '5'], Result: 9.0
+2024-03-28 22:18:12,706 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-28 22:18:12,710 - INFO - Calculation history loaded successfully
+2024-03-28 22:18:12,713 - INFO - Calculation saved to history.
+2024-03-28 22:18:12,714 - INFO - User input: ['divide', '500', '5'], Result: 100.0
+2024-03-28 22:18:18,369 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-28 22:18:18,372 - INFO - Calculation history loaded successfully
+2024-03-28 22:18:18,379 - INFO - User input: ['history'], Result: None
+2024-03-28 22:18:25,576 - INFO - Exiting program.
+2024-03-28 23:26:59,086 - INFO - Application started
+2024-03-28 23:26:59,087 - INFO - Available commands:
+2024-03-28 23:26:59,087 - INFO - - add
+2024-03-28 23:26:59,088 - INFO - - subtract
+2024-03-28 23:26:59,088 - INFO - - multiply
+2024-03-28 23:26:59,088 - INFO - - divide
+2024-03-28 23:26:59,089 - INFO - - history
+2024-03-28 23:26:59,089 - INFO - - clear
+2024-03-28 23:27:02,133 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-28 23:27:02,138 - INFO - Calculation history loaded successfully
+2024-03-28 23:27:02,142 - INFO - Calculation saved to history.
+2024-03-28 23:27:02,142 - INFO - User input: ['add', '2', '2'], Result: 4.0
+2024-03-28 23:27:05,624 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-28 23:27:05,628 - INFO - Calculation history loaded successfully
+2024-03-28 23:27:05,632 - INFO - Calculation saved to history.
+2024-03-28 23:27:05,632 - INFO - User input: ['add', '2', '3'], Result: 5.0
+2024-03-28 23:27:07,857 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-28 23:27:07,859 - INFO - Calculation history loaded successfully
+2024-03-28 23:27:07,866 - INFO - User input: ['history'], Result: None
+2024-03-28 23:27:16,916 - INFO - Exiting program.
+2024-03-28 23:44:20,827 - INFO - Application started
+2024-03-28 23:44:20,827 - INFO - Available commands:
+2024-03-28 23:44:20,827 - INFO - - {command}
+2024-03-28 23:44:20,827 - INFO - - {command}
+2024-03-28 23:44:20,827 - INFO - - {command}
+2024-03-28 23:44:20,827 - INFO - - {command}
+2024-03-28 23:44:20,827 - INFO - - {command}
+2024-03-28 23:44:20,828 - INFO - - {command}
+2024-03-28 23:44:25,657 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-28 23:44:25,662 - INFO - Calculation history loaded successfully
+2024-03-28 23:44:25,666 - INFO - Calculation saved to history.
+2024-03-28 23:44:25,667 - INFO - User input: ['add', '1', '1'], Result: 2.0
+2024-03-28 23:44:28,418 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-28 23:44:28,420 - INFO - Calculation history loaded successfully
+2024-03-28 23:44:28,423 - INFO - User input: ['history'], Result: None
+2024-03-28 23:44:34,672 - INFO - Exiting program.
+2024-03-29 00:23:31,494 - INFO - Application started
+2024-03-29 00:23:31,494 - INFO - Available commands:
+2024-03-29 00:23:31,495 - INFO - - {command}
+2024-03-29 00:23:31,495 - INFO - - {command}
+2024-03-29 00:23:31,495 - INFO - - {command}
+2024-03-29 00:23:31,496 - INFO - - {command}
+2024-03-29 00:23:31,496 - INFO - - {command}
+2024-03-29 00:23:31,496 - INFO - - {command}
+2024-03-29 00:23:39,084 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 00:23:39,088 - INFO - Calculation history loaded successfully
+2024-03-29 00:23:39,092 - INFO - Calculation saved to history.
+2024-03-29 00:23:39,092 - INFO - User input: ['add', '1', '1'], Result: 2.0
+2024-03-29 00:23:42,823 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 00:23:42,827 - INFO - Calculation history loaded successfully
+2024-03-29 00:23:42,831 - INFO - Calculation saved to history.
+2024-03-29 00:23:42,831 - INFO - User input: ['add', '3', '3'], Result: 6.0
+2024-03-29 00:23:46,649 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 00:23:46,652 - INFO - Calculation history loaded successfully
+2024-03-29 00:23:46,658 - INFO - User input: ['history'], Result: None
+2024-03-29 00:23:50,513 - INFO - Calculation history cleared.
+2024-03-29 00:23:50,513 - INFO - User input: ['clear'], Result: None
+2024-03-29 00:23:53,473 - INFO - Exiting program.
+2024-03-29 00:32:47,312 - INFO - Application started
+2024-03-29 00:32:47,312 - INFO - Available commands:
+2024-03-29 00:32:47,312 - INFO - - {command}
+2024-03-29 00:32:47,312 - INFO - - {command}
+2024-03-29 00:32:47,312 - INFO - - {command}
+2024-03-29 00:32:47,313 - INFO - - {command}
+2024-03-29 00:32:47,313 - INFO - - {command}
+2024-03-29 00:32:47,313 - INFO - - {command}
+2024-03-29 00:33:09,236 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 00:33:09,240 - INFO - Calculation history loaded successfully
+2024-03-29 00:33:09,243 - INFO - Calculation saved to history.
+2024-03-29 00:33:09,243 - INFO - User input: ['add', '3', '4'], Result: 7.0
+2024-03-29 00:33:13,335 - INFO - Exiting program.
+2024-03-29 00:44:41,722 - INFO - Application started
+2024-03-29 00:44:41,722 - INFO - Available commands:
+2024-03-29 00:44:41,722 - INFO - - {command}
+2024-03-29 00:44:41,722 - INFO - - {command}
+2024-03-29 00:44:41,722 - INFO - - {command}
+2024-03-29 00:44:41,722 - INFO - - {command}
+2024-03-29 00:44:41,722 - INFO - - {command}
+2024-03-29 00:44:41,723 - INFO - - {command}
+2024-03-29 00:46:40,744 - INFO - Exiting program.
+2024-03-29 00:46:42,720 - INFO - Application started
+2024-03-29 00:46:42,720 - INFO - Available commands:
+2024-03-29 00:46:42,720 - INFO - - add
+2024-03-29 00:46:42,720 - INFO - - subtract
+2024-03-29 00:46:42,720 - INFO - - multiply
+2024-03-29 00:46:42,720 - INFO - - divide
+2024-03-29 00:46:42,720 - INFO - - history
+2024-03-29 00:46:42,721 - INFO - - clear
+2024-03-29 00:46:49,635 - INFO - Exiting program.
+2024-03-29 11:26:37,044 - INFO - Application started
+2024-03-29 11:26:37,045 - INFO - Available commands:
+2024-03-29 11:26:37,045 - INFO - - add
+2024-03-29 11:26:37,045 - INFO - - subtract
+2024-03-29 11:26:37,045 - INFO - - multiply
+2024-03-29 11:26:37,045 - INFO - - divide
+2024-03-29 11:26:37,045 - INFO - - history
+2024-03-29 11:26:37,045 - INFO - - clear
+2024-03-29 11:26:54,013 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 11:26:54,018 - INFO - Calculation history loaded successfully
+2024-03-29 11:26:54,022 - INFO - Calculation saved to history.
+2024-03-29 11:26:54,022 - INFO - User input: ['add', '2', '3'], Result: 5.0
+2024-03-29 11:26:59,434 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 11:26:59,437 - INFO - Calculation history loaded successfully
+2024-03-29 11:26:59,441 - INFO - Calculation saved to history.
+2024-03-29 11:26:59,441 - INFO - User input: ['divide', '10', '2'], Result: 5.0
+2024-03-29 11:27:04,980 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 11:27:04,982 - INFO - Calculation history loaded successfully
+2024-03-29 11:27:04,986 - INFO - User input: ['history'], Result: None
+2024-03-29 11:27:17,172 - INFO - Calculation history cleared.
+2024-03-29 11:27:17,172 - INFO - User input: ['clear'], Result: None
+2024-03-29 11:27:21,333 - INFO - Calculation saved to history.
+2024-03-29 11:27:21,334 - INFO - User input: ['add', '4', '5'], Result: 9.0
+2024-03-29 11:27:23,789 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 11:27:23,791 - INFO - Calculation history loaded successfully
+2024-03-29 11:27:23,792 - INFO - User input: ['history'], Result: None
+2024-03-29 11:27:31,630 - INFO - Exiting program.
+2024-03-29 11:28:43,529 - INFO - Application started
+2024-03-29 11:28:43,529 - INFO - Available commands:
+2024-03-29 11:28:43,529 - INFO - - add
+2024-03-29 11:28:43,529 - INFO - - subtract
+2024-03-29 11:28:43,530 - INFO - - multiply
+2024-03-29 11:28:43,530 - INFO - - divide
+2024-03-29 11:28:43,530 - INFO - - history
+2024-03-29 11:28:43,531 - INFO - - clear
+2024-03-29 11:28:53,528 - INFO - Calculation history cleared.
+2024-03-29 11:28:53,528 - INFO - User input: ['clear'], Result: None
+2024-03-29 11:28:57,338 - WARNING - No calculation history found.
+2024-03-29 11:28:57,341 - WARNING - No calculation history available.
+2024-03-29 11:28:57,341 - INFO - User input: ['history'], Result: None
+2024-03-29 11:29:13,798 - WARNING - No calculation history found.
+2024-03-29 11:29:13,799 - WARNING - No calculation history available.
+2024-03-29 11:29:13,800 - INFO - User input: ['history'], Result: None
+2024-03-29 11:29:58,542 - INFO - No calculation history found to clear.
+2024-03-29 11:29:58,542 - INFO - User input: ['clear'], Result: None
+2024-03-29 11:30:31,930 - INFO - Exiting program.
+2024-03-29 11:31:11,780 - INFO - Application started
+2024-03-29 11:31:11,780 - INFO - Available commands:
+2024-03-29 11:31:11,780 - INFO - - add
+2024-03-29 11:31:11,780 - INFO - - subtract
+2024-03-29 11:31:11,781 - INFO - - multiply
+2024-03-29 11:31:11,781 - INFO - - divide
+2024-03-29 11:31:11,781 - INFO - - history
+2024-03-29 11:31:11,781 - INFO - - clear
+2024-03-29 11:31:17,982 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 11:31:17,986 - INFO - Calculation history loaded successfully
+2024-03-29 11:31:17,988 - INFO - User input: ['history'], Result: None
+2024-03-29 11:31:20,550 - INFO - Calculation history cleared.
+2024-03-29 11:31:20,551 - INFO - User input: ['clear'], Result: None
+2024-03-29 11:31:43,929 - INFO - Calculation saved to history.
+2024-03-29 11:31:43,930 - INFO - User input: ['add', '2', '2'], Result: 4.0
+2024-03-29 11:31:47,391 - INFO - Calculation history cleared.
+2024-03-29 11:31:47,392 - INFO - User input: ['clear'], Result: None
+2024-03-29 11:31:50,931 - INFO - Exiting program.
+2024-03-29 11:40:02,350 - INFO - Application started
+2024-03-29 11:40:02,350 - INFO - Available commands:
+2024-03-29 11:40:02,351 - INFO - - add
+2024-03-29 11:40:02,351 - INFO - - subtract
+2024-03-29 11:40:02,351 - INFO - - multiply
+2024-03-29 11:40:02,352 - INFO - - divide
+2024-03-29 11:40:02,352 - INFO - - history
+2024-03-29 11:40:02,352 - INFO - - clear
+2024-03-29 11:40:04,928 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 11:40:04,934 - INFO - Calculation history loaded successfully
+2024-03-29 11:40:04,940 - INFO - Calculation saved to history.
+2024-03-29 11:40:04,940 - INFO - User input: ['add', '4', '4'], Result: 8.0
+2024-03-29 11:40:07,809 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 11:40:07,812 - INFO - Calculation history loaded successfully
+2024-03-29 11:40:07,812 - INFO - Calculation history:
+2024-03-29 11:40:07,816 - INFO - User input: ['history'], Result: None
+2024-03-29 11:40:11,551 - INFO - Exiting program.
+2024-03-29 11:49:59,519 - INFO - Application started
+2024-03-29 11:49:59,520 - INFO - Available commands:
+2024-03-29 11:49:59,520 - INFO - - add
+2024-03-29 11:49:59,520 - INFO - - subtract
+2024-03-29 11:49:59,520 - INFO - - multiply
+2024-03-29 11:49:59,520 - INFO - - divide
+2024-03-29 11:49:59,520 - INFO - - history
+2024-03-29 11:49:59,520 - INFO - - clear
+2024-03-29 11:50:02,835 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 11:50:02,840 - INFO - Calculation history loaded successfully
+2024-03-29 11:50:02,844 - INFO - Calculation saved to history.
+2024-03-29 11:50:02,845 - INFO - User input: ['add', '2', '2'], Result: 4.0
+2024-03-29 11:50:05,911 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 11:50:05,914 - INFO - Calculation history loaded successfully
+2024-03-29 11:50:05,914 - INFO - Calculation history:
+2024-03-29 11:50:05,915 - INFO - 1. User input: multiply 3 4, Result: 12.0
+2024-03-29 11:50:05,916 - INFO - 2. User input: subtract 5 invalid_operand, Result: 3.0
+2024-03-29 11:50:05,916 - INFO - 3. User input: add 2 3, Result: 5.0
+2024-03-29 11:50:05,917 - INFO - 4. User input: subtract 5 2, Result: 3.0
+2024-03-29 11:50:05,918 - INFO - 5. User input: add 2.0 3.0, Result: 5.0
+2024-03-29 11:50:05,918 - INFO - 6. User input: subtract 5.0 2.0, Result: 3.0
+2024-03-29 11:50:05,919 - INFO - 7. User input: multiply 3.0 4.0, Result: 12.0
+2024-03-29 11:50:05,919 - INFO - 8. User input: divide 10.0 2.0, Result: 5.0
+2024-03-29 11:50:05,920 - INFO - 9. User input: add 2.0 2.0, Result: 4.0
+2024-03-29 11:50:05,921 - INFO - User input: ['history'], Result: None
+2024-03-29 11:50:21,086 - INFO - Exiting program.
+2024-03-29 11:51:42,151 - INFO - Application started
+2024-03-29 11:51:42,151 - INFO - Available commands:
+2024-03-29 11:51:42,151 - INFO - - add
+2024-03-29 11:51:42,151 - INFO - - subtract
+2024-03-29 11:51:42,151 - INFO - - multiply
+2024-03-29 11:51:42,151 - INFO - - divide
+2024-03-29 11:51:42,152 - INFO - - history
+2024-03-29 11:51:42,152 - INFO - - clear
+2024-03-29 11:51:47,079 - INFO - Exiting program.
+2024-03-29 11:53:21,044 - INFO - Application started
+2024-03-29 11:53:21,044 - INFO - Available commands:
+2024-03-29 11:53:21,044 - INFO - - add
+2024-03-29 11:53:21,044 - INFO - - subtract
+2024-03-29 11:53:21,044 - INFO - - multiply
+2024-03-29 11:53:21,044 - INFO - - divide
+2024-03-29 11:53:21,044 - INFO - - history
+2024-03-29 11:53:21,045 - INFO - - clear
+2024-03-29 11:53:30,201 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 11:53:30,206 - INFO - Calculation history loaded successfully
+2024-03-29 11:53:30,210 - INFO - Calculation saved to history.
+2024-03-29 11:53:30,211 - INFO - User input: ['add', '1', '1'], Result: 2.0
+2024-03-29 11:53:37,432 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 11:53:37,434 - INFO - Calculation history loaded successfully
+2024-03-29 11:53:37,435 - INFO - Calculation history:
+2024-03-29 11:53:37,435 - INFO - 1. User input: multiply 3 4, Result: 12.0
+2024-03-29 11:53:37,436 - INFO - 2. User input: subtract 5 invalid_operand, Result: 3.0
+2024-03-29 11:53:37,437 - INFO - 3. User input: add 2 3, Result: 5.0
+2024-03-29 11:53:37,437 - INFO - 4. User input: subtract 5 2, Result: 3.0
+2024-03-29 11:53:37,438 - INFO - 5. User input: add 2.0 3.0, Result: 5.0
+2024-03-29 11:53:37,439 - INFO - 6. User input: subtract 5.0 2.0, Result: 3.0
+2024-03-29 11:53:37,439 - INFO - 7. User input: multiply 3.0 4.0, Result: 12.0
+2024-03-29 11:53:37,440 - INFO - 8. User input: divide 10.0 2.0, Result: 5.0
+2024-03-29 11:53:37,441 - INFO - 9. User input: add 1.0 1.0, Result: 2.0
+2024-03-29 11:53:37,441 - INFO - User input: ['history'], Result: None
+2024-03-29 11:53:41,984 - INFO - Calculation history cleared.
+2024-03-29 11:53:41,985 - INFO - User input: ['clear'], Result: None
+2024-03-29 11:53:47,296 - INFO - Exiting program.
+2024-03-29 11:57:03,199 - INFO - Application started
+2024-03-29 11:57:03,200 - INFO - Available commands:
+2024-03-29 11:57:03,201 - INFO - - add
+2024-03-29 11:57:03,202 - INFO - - subtract
+2024-03-29 11:57:03,203 - INFO - - multiply
+2024-03-29 11:57:03,203 - INFO - - divide
+2024-03-29 11:57:03,204 - INFO - - history
+2024-03-29 11:57:03,204 - INFO - - clear
+2024-03-29 11:57:07,081 - INFO - Exiting program.
+2024-03-29 11:57:20,099 - INFO - Application started
+2024-03-29 11:57:20,099 - INFO - Available commands:
+2024-03-29 11:57:20,100 - INFO - - add
+2024-03-29 11:57:20,100 - INFO - - subtract
+2024-03-29 11:57:20,102 - INFO - - multiply
+2024-03-29 11:57:20,103 - INFO - - divide
+2024-03-29 11:57:20,103 - INFO - - history
+2024-03-29 11:57:20,104 - INFO - - clear
+2024-03-29 11:57:23,906 - INFO - Exiting program.
+2024-03-29 12:03:37,855 - INFO - Application started
+2024-03-29 12:03:37,855 - INFO - Available commands:
+2024-03-29 12:03:37,855 - INFO - - {command}
+2024-03-29 12:03:37,855 - INFO - - {command}
+2024-03-29 12:03:37,856 - INFO - - {command}
+2024-03-29 12:03:37,856 - INFO - - {command}
+2024-03-29 12:03:37,856 - INFO - - {command}
+2024-03-29 12:03:37,856 - INFO - - {command}
+2024-03-29 12:05:17,311 - INFO - Exiting program.
+INFO:root:Testing basic logging...
+INFO:app.app:Application started
+INFO:app.app:Available commands:
+INFO:app.app:- {command}
+INFO:app.app:- {command}
+INFO:app.app:- {command}
+INFO:app.app:- {command}
+INFO:app.app:- {command}
+INFO:app.app:- {command}
+INFO:app.app:User input: ['er'], Result: Command not found
+INFO:app.app:Exiting program.
+INFO:root:Test log message
+INFO:app.app:Application started
+INFO:app.app:Available commands:
+INFO:app.app:- {command}
+INFO:app.app:- {command}
+INFO:app.app:- {command}
+INFO:app.app:- {command}
+INFO:app.app:- {command}
+INFO:app.app:- {command}
+INFO:app.app:Exiting program.
+2024-03-29 12:08:49,009 - INFO - Available commands:
+2024-03-29 12:08:49,009 - INFO - - {command}
+2024-03-29 12:08:49,009 - INFO - - {command}
+2024-03-29 12:08:49,010 - INFO - - {command}
+2024-03-29 12:08:49,010 - INFO - - {command}
+2024-03-29 12:08:49,010 - INFO - - {command}
+2024-03-29 12:08:49,010 - INFO - - {command}
+2024-03-29 12:08:51,561 - INFO - Exiting program.
+2024-03-29 12:10:10,368 - INFO - Available commands:
+2024-03-29 12:10:10,368 - INFO - - {command}
+2024-03-29 12:10:10,368 - INFO - - {command}
+2024-03-29 12:10:10,368 - INFO - - {command}
+2024-03-29 12:10:10,369 - INFO - - {command}
+2024-03-29 12:10:10,369 - INFO - - {command}
+2024-03-29 12:10:10,369 - INFO - - {command}
+2024-03-29 12:10:13,270 - INFO - Exiting program.
+2024-03-29 12:14:49,029 - INFO - Available commands:
+2024-03-29 12:14:49,029 - INFO - - add
+2024-03-29 12:14:49,029 - INFO - - subtract
+2024-03-29 12:14:49,029 - INFO - - multiply
+2024-03-29 12:14:49,029 - INFO - - divide
+2024-03-29 12:14:49,030 - INFO - - history
+2024-03-29 12:14:49,030 - INFO - - clear
+2024-03-29 12:14:54,045 - INFO - Exiting program.
+2024-03-29 12:20:07,022 - INFO - Application started
+2024-03-29 12:20:07,023 - INFO - Available commands:
+2024-03-29 12:20:07,023 - INFO - - add
+2024-03-29 12:20:07,023 - INFO - - subtract
+2024-03-29 12:20:07,023 - INFO - - multiply
+2024-03-29 12:20:07,023 - INFO - - divide
+2024-03-29 12:20:07,023 - INFO - - history
+2024-03-29 12:20:07,024 - INFO - - clear
+2024-03-29 12:20:10,949 - INFO - Exiting program.
+2024-03-29 12:22:56,461 - INFO - Application started
+2024-03-29 12:22:56,461 - INFO - Available commands:
+2024-03-29 12:22:56,461 - INFO - - add
+2024-03-29 12:22:56,461 - INFO - - subtract
+2024-03-29 12:22:56,461 - INFO - - multiply
+2024-03-29 12:22:56,461 - INFO - - divide
+2024-03-29 12:22:56,462 - INFO - - history
+2024-03-29 12:22:56,462 - INFO - - clear
+2024-03-29 12:23:06,293 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 12:23:06,298 - INFO - Calculation history loaded successfully
+2024-03-29 12:23:06,302 - INFO - Calculation saved to history.
+2024-03-29 12:23:06,302 - INFO - User input: ['add', '1', '1'], Result: 2.0
+2024-03-29 12:23:10,813 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 12:23:10,816 - INFO - Calculation history loaded successfully
+2024-03-29 12:23:10,820 - INFO - User input: ['history'], Result: None
+2024-03-29 12:23:17,475 - INFO - Exiting program.
+2024-03-29 12:36:19,986 - INFO - Application started
+2024-03-29 12:36:19,987 - INFO - Available commands:
+2024-03-29 12:36:19,987 - INFO - - add
+2024-03-29 12:36:19,987 - INFO - - subtract
+2024-03-29 12:36:19,987 - INFO - - multiply
+2024-03-29 12:36:19,987 - INFO - - divide
+2024-03-29 12:36:19,987 - INFO - - history
+2024-03-29 12:36:19,987 - INFO - - clear
+2024-03-29 12:36:25,885 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 12:36:25,889 - INFO - Calculation history loaded successfully
+2024-03-29 12:36:25,893 - INFO - Calculation saved to history.
+2024-03-29 12:36:25,894 - INFO - User input: ['add', '1', '1'], Result: 2.0
+2024-03-29 12:36:57,427 - INFO - Application started
+2024-03-29 12:36:57,427 - INFO - Available commands:
+2024-03-29 12:36:57,427 - INFO - - add
+2024-03-29 12:36:57,428 - INFO - - subtract
+2024-03-29 12:36:57,428 - INFO - - multiply
+2024-03-29 12:36:57,428 - INFO - - divide
+2024-03-29 12:36:57,428 - INFO - - history
+2024-03-29 12:36:57,428 - INFO - - clear
+2024-03-29 12:37:07,282 - INFO - Exiting program.
+2024-03-29 12:37:20,574 - INFO - Application started
+2024-03-29 12:37:20,574 - INFO - Available commands:
+2024-03-29 12:37:20,574 - INFO - - add
+2024-03-29 12:37:20,575 - INFO - - subtract
+2024-03-29 12:37:20,575 - INFO - - multiply
+2024-03-29 12:37:20,575 - INFO - - divide
+2024-03-29 12:37:20,575 - INFO - - history
+2024-03-29 12:37:20,575 - INFO - - clear
+2024-03-29 12:41:39,425 - INFO - Application started
+2024-03-29 12:41:39,425 - INFO - Available commands:
+2024-03-29 12:41:39,425 - INFO - - add
+2024-03-29 12:41:39,425 - INFO - - subtract
+2024-03-29 12:41:39,425 - INFO - - multiply
+2024-03-29 12:41:39,425 - INFO - - divide
+2024-03-29 12:41:39,425 - INFO - - history
+2024-03-29 12:41:39,425 - INFO - - clear
+2024-03-29 12:42:31,636 - INFO - Application started
+2024-03-29 12:42:31,636 - INFO - Available commands:
+2024-03-29 12:42:31,637 - INFO - - add
+2024-03-29 12:42:31,637 - INFO - - subtract
+2024-03-29 12:42:31,637 - INFO - - multiply
+2024-03-29 12:42:31,637 - INFO - - divide
+2024-03-29 12:42:31,637 - INFO - - history
+2024-03-29 12:42:31,637 - INFO - - clear
+2024-03-29 12:44:26,576 - INFO - Application started
+2024-03-29 12:44:26,576 - INFO - Available commands:
+2024-03-29 12:44:26,576 - INFO - - add
+2024-03-29 12:44:26,576 - INFO - - subtract
+2024-03-29 12:44:26,576 - INFO - - multiply
+2024-03-29 12:44:26,576 - INFO - - divide
+2024-03-29 12:44:26,576 - INFO - - history
+2024-03-29 12:44:26,576 - INFO - - clear
+2024-03-29 12:44:29,530 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 12:44:29,534 - INFO - Calculation history loaded successfully
+2024-03-29 12:44:29,540 - INFO - Calculation saved to history.
+2024-03-29 12:44:29,540 - INFO - User input: ['add', '1', '1'], Result: 2.0
+2024-03-29 12:47:58,245 - INFO - Application started
+2024-03-29 12:47:58,245 - INFO - Available commands:
+2024-03-29 12:48:25,267 - INFO - Application started
+2024-03-29 12:48:25,267 - INFO - Available commands:
+2024-03-29 12:48:25,267 - INFO - - add
+2024-03-29 12:48:25,267 - INFO - - subtract
+2024-03-29 12:48:25,267 - INFO - - multiply
+2024-03-29 12:48:25,267 - INFO - - divide
+2024-03-29 12:48:25,267 - INFO - - history
+2024-03-29 12:48:25,267 - INFO - - clear
+2024-03-29 12:48:30,469 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 12:48:30,473 - INFO - Calculation history loaded successfully
+2024-03-29 12:48:30,477 - INFO - Calculation saved to history.
+2024-03-29 12:48:30,478 - INFO - User input: ['add', '1', '1'], Result: 2.0
+2024-03-29 12:49:31,567 - INFO - Application started
+2024-03-29 12:49:31,567 - INFO - Available commands:
+2024-03-29 12:49:31,567 - INFO - - add
+2024-03-29 12:49:31,568 - INFO - - subtract
+2024-03-29 12:49:31,568 - INFO - - multiply
+2024-03-29 12:49:31,568 - INFO - - divide
+2024-03-29 12:49:31,568 - INFO - - history
+2024-03-29 12:49:31,568 - INFO - - clear
+2024-03-29 12:49:38,140 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 12:49:38,144 - INFO - Calculation history loaded successfully
+2024-03-29 12:49:38,148 - INFO - Calculation saved to history.
+2024-03-29 12:49:38,149 - INFO - User input: ['add', '1', '1'], Result: 2.0
+2024-03-29 12:52:59,541 - INFO - Application started
+2024-03-29 12:52:59,542 - INFO - Available commands:
+2024-03-29 12:52:59,542 - INFO - - add
+2024-03-29 12:52:59,542 - INFO - - subtract
+2024-03-29 12:52:59,542 - INFO - - multiply
+2024-03-29 12:52:59,542 - INFO - - divide
+2024-03-29 12:52:59,543 - INFO - - history
+2024-03-29 12:52:59,543 - INFO - - clear
+2024-03-29 12:53:16,057 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 12:53:16,061 - INFO - Calculation history loaded successfully
+2024-03-29 12:53:16,064 - INFO - User input: ['history'], Result: None
+2024-03-29 12:53:27,296 - INFO - Calculation history cleared.
+2024-03-29 12:53:27,296 - INFO - User input: ['clear'], Result: None
+2024-03-29 12:53:31,634 - INFO - Exiting program.
+2024-03-29 13:34:17,582 - INFO - Application started
+2024-03-29 13:34:17,583 - INFO - Available commands:
+2024-03-29 13:34:17,583 - INFO - - add
+2024-03-29 13:34:17,583 - INFO - - subtract
+2024-03-29 13:34:17,583 - INFO - - multiply
+2024-03-29 13:34:17,583 - INFO - - divide
+2024-03-29 13:34:17,583 - INFO - - history
+2024-03-29 13:34:17,583 - INFO - - clear
+2024-03-29 13:34:21,161 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 13:34:21,164 - INFO - Calculation history loaded successfully
+2024-03-29 13:34:21,168 - INFO - Calculation saved to history.
+2024-03-29 13:34:21,169 - INFO - User input: ['add', '1', '1'], Result: 2.0
+2024-03-29 13:34:32,484 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 13:34:32,486 - INFO - Calculation history loaded successfully
+2024-03-29 13:34:32,494 - INFO - User input: ['history'], Result: None
+2024-03-29 13:34:36,149 - INFO - Calculation history cleared.
+2024-03-29 13:34:36,149 - INFO - User input: ['clear'], Result: None
+2024-03-29 13:34:38,831 - INFO - Exiting program.
+2024-03-29 13:36:35,702 - INFO - Application started
+2024-03-29 13:36:35,702 - INFO - Available commands:
+2024-03-29 13:36:35,702 - INFO - - add
+2024-03-29 13:36:35,702 - INFO - - subtract
+2024-03-29 13:36:35,702 - INFO - - multiply
+2024-03-29 13:36:35,702 - INFO - - divide
+2024-03-29 13:36:35,703 - INFO - - history
+2024-03-29 13:36:35,703 - INFO - - clear
+2024-03-29 13:36:52,756 - INFO - Exiting program.
+2024-03-29 13:43:19,457 - INFO - Application started
+2024-03-29 13:43:19,457 - INFO - Available commands:
+2024-03-29 13:43:19,457 - INFO - - add
+2024-03-29 13:43:19,457 - INFO - - subtract
+2024-03-29 13:43:19,457 - INFO - - multiply
+2024-03-29 13:43:19,457 - INFO - - divide
+2024-03-29 13:43:19,457 - INFO - - history
+2024-03-29 13:43:19,457 - INFO - - clear
+2024-03-29 13:43:21,764 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 13:43:21,768 - INFO - Calculation history loaded successfully
+2024-03-29 13:43:21,773 - INFO - Calculation saved to history.
+2024-03-29 13:43:21,773 - INFO - User input: ['add', '1', '1'], Result: 2.0
+2024-03-29 13:43:29,842 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 13:43:29,844 - INFO - Calculation history loaded successfully
+2024-03-29 13:43:29,847 - INFO - User input: ['history'], Result: None
+2024-03-29 13:43:34,095 - INFO - Calculation history cleared.
+2024-03-29 13:43:34,095 - INFO - User input: ['clear'], Result: None
+2024-03-29 13:43:37,732 - INFO - Exiting program.
+2024-03-29 13:47:08,472 - INFO - Application started
+2024-03-29 13:47:08,472 - INFO - Available commands:
+2024-03-29 13:47:08,472 - INFO - - add
+2024-03-29 13:47:08,472 - INFO - - subtract
+2024-03-29 13:47:08,472 - INFO - - multiply
+2024-03-29 13:47:08,472 - INFO - - divide
+2024-03-29 13:47:08,472 - INFO - - history
+2024-03-29 13:47:08,472 - INFO - - clear
+2024-03-29 13:47:18,198 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 13:47:18,202 - INFO - Calculation history loaded successfully
+2024-03-29 13:47:18,206 - INFO - Calculation saved to history.
+2024-03-29 13:47:18,207 - INFO - User input: ['add', '1', '1'], Result: 2.0
+2024-03-29 13:47:25,926 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 13:47:25,928 - INFO - Calculation history loaded successfully
+2024-03-29 13:47:25,932 - INFO - User input: ['history'], Result: None
+2024-03-29 13:47:29,830 - INFO - Calculation history cleared.
+2024-03-29 13:47:29,830 - INFO - User input: ['clear'], Result: None
+2024-03-29 13:47:32,745 - INFO - Exiting program.
+2024-03-29 14:00:00,123 - INFO - Application started
+2024-03-29 14:00:00,124 - INFO - Available commands:
+2024-03-29 14:00:00,124 - INFO - - add
+2024-03-29 14:00:00,124 - INFO - - subtract
+2024-03-29 14:00:00,124 - INFO - - multiply
+2024-03-29 14:00:00,124 - INFO - - divide
+2024-03-29 14:00:00,124 - INFO - - history
+2024-03-29 14:00:00,124 - INFO - - clear
+2024-03-29 14:00:13,740 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 14:00:13,745 - INFO - Calculation history loaded successfully
+2024-03-29 14:00:13,749 - INFO - Calculation saved to history.
+2024-03-29 14:00:13,749 - INFO - User input: ['add', '1', '1'], Result: 2.0
+2024-03-29 14:00:17,366 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 14:00:17,369 - INFO - Calculation history loaded successfully
+2024-03-29 14:00:17,377 - INFO - User input: ['history'], Result: None
+2024-03-29 14:00:25,224 - INFO - Calculation history cleared.
+2024-03-29 14:00:25,224 - INFO - User input: ['clear'], Result: None
+2024-03-29 14:00:28,522 - INFO - Exiting program.
+2024-03-29 14:02:05,337 - INFO - Application started
+2024-03-29 14:02:05,338 - INFO - Available commands:
+2024-03-29 14:02:05,338 - INFO - - add
+2024-03-29 14:02:05,339 - INFO - - subtract
+2024-03-29 14:02:05,339 - INFO - - multiply
+2024-03-29 14:02:05,340 - INFO - - divide
+2024-03-29 14:02:05,340 - INFO - - history
+2024-03-29 14:02:05,340 - INFO - - clear
+2024-03-29 14:02:09,465 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 14:02:09,468 - INFO - Calculation history loaded successfully
+2024-03-29 14:02:09,475 - INFO - Calculation saved to history.
+2024-03-29 14:02:09,476 - INFO - User input: ['add', '1', '1'], Result: 2.0
+2024-03-29 14:02:12,202 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 14:02:12,205 - INFO - Calculation history loaded successfully
+2024-03-29 14:02:12,207 - INFO - User input: ['history'], Result: None
+2024-03-29 14:02:15,766 - INFO - Calculation history cleared.
+2024-03-29 14:02:15,766 - INFO - User input: ['clear'], Result: None
+2024-03-29 14:02:19,802 - INFO - Exiting program.
+2024-03-29 14:07:27,480 - INFO - Application started
+2024-03-29 14:07:27,481 - INFO - Available commands:
+2024-03-29 14:07:27,481 - INFO - - add
+2024-03-29 14:07:27,481 - INFO - - subtract
+2024-03-29 14:07:27,481 - INFO - - multiply
+2024-03-29 14:07:27,481 - INFO - - divide
+2024-03-29 14:07:27,481 - INFO - - history
+2024-03-29 14:07:27,481 - INFO - - clear
+2024-03-29 14:07:36,411 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 14:07:36,415 - INFO - Calculation history loaded successfully
+2024-03-29 14:07:36,420 - INFO - Calculation saved to history.
+2024-03-29 14:07:36,420 - INFO - User input: ['add', '1', '1'], Result: 2.0
+2024-03-29 14:07:39,300 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 14:07:39,302 - INFO - Calculation history loaded successfully
+2024-03-29 14:07:39,304 - INFO - User input: ['history'], Result: None
+2024-03-29 14:07:40,699 - INFO - Calculation history cleared.
+2024-03-29 14:07:40,699 - INFO - User input: ['clear'], Result: None
+2024-03-29 14:07:44,371 - WARNING - No calculation history found.
+2024-03-29 14:07:44,373 - INFO - User input: ['history'], Result: None
+2024-03-29 14:07:47,510 - INFO - Exiting program.
+2024-03-29 14:09:45,278 - INFO - Application started
+2024-03-29 14:09:45,278 - INFO - Available commands:
+2024-03-29 14:09:45,278 - INFO - - add
+2024-03-29 14:09:45,278 - INFO - - subtract
+2024-03-29 14:09:45,279 - INFO - - multiply
+2024-03-29 14:09:45,279 - INFO - - divide
+2024-03-29 14:09:45,279 - INFO - - history
+2024-03-29 14:09:45,279 - INFO - - clear
+2024-03-29 14:09:48,648 - INFO - Exiting program.
+2024-03-29 14:36:38,213 - INFO - Application started
+2024-03-29 14:36:38,213 - INFO - Available commands:
+2024-03-29 14:36:38,213 - INFO - - add
+2024-03-29 14:36:38,213 - INFO - - subtract
+2024-03-29 14:36:38,214 - INFO - - multiply
+2024-03-29 14:36:38,214 - INFO - - divide
+2024-03-29 14:36:38,214 - INFO - - history
+2024-03-29 14:36:38,214 - INFO - - clear
+2024-03-29 14:36:49,973 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 14:36:49,981 - ERROR - Error loading calculation history: No columns to parse from file
+2024-03-29 14:36:49,999 - INFO - Calculation saved to history.
+2024-03-29 14:36:49,999 - INFO - User input: ['add', '1', '1'], Result: 2.0
+2024-03-29 14:36:56,229 - INFO - Loading calculation history from /home/zbrito/projects2024/midterm/history.csv
+2024-03-29 14:36:56,234 - INFO - Calculation history loaded successfully
+2024-03-29 14:36:56,236 - INFO - User input: ['history'], Result: None
+2024-03-29 14:36:59,629 - INFO - Calculation history cleared.
+2024-03-29 14:36:59,630 - INFO - User input: ['clear'], Result: None
+2024-03-29 14:37:01,879 - INFO - Exiting program.
