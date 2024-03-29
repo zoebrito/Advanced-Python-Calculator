@@ -10,9 +10,11 @@ class CommandHandler:
     def register_command(self, name, command):
         self.commands[name] = command
 
-    def execute_command(self, name, args):
+    def execute_command(self, name, args=None):
         if name in self.commands:
-            return self.commands[name](args)
+            if args is not None:
+                return self.commands[name](args)
+            return self.commands[name]()  # Call the command without passing arguments
         return "Command not found"
 
     def get_available_commands(self):
