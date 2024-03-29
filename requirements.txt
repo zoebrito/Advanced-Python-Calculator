@@ -22,3 +22,4 @@ tomlkit==0.12.4
 typing_extensions==4.10.0
 coverage==7.4.3
 pandas
+python-dotenv==0.19.1
