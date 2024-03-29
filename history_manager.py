@@ -30,11 +30,8 @@ class HistoryManager:
             else:
                 logging.warning("No calculation history found.")
                 return pd.DataFrame(columns=["Command", "Operands", "Result"])
-        except FileNotFoundError as e:
-            logging.error("File not found: %s", e)
-            return pd.DataFrame(columns=["Command", "Operands", "Result"])
-        except pd.errors.EmptyDataError as e:
-            logging.error("Empty calculation history: %s", e)
+        except (FileNotFoundError, pd.errors.EmptyDataError) as e:  # Catch specific exceptions
+            logging.error("Error loading calculation history: %s", e)
             return pd.DataFrame(columns=["Command", "Operands", "Result"])
         return history_df
 
@@ -49,7 +46,7 @@ class HistoryManager:
                 history_df = pd.DataFrame([new_row])
             history_df.to_csv(self.history_file_path, index=False)
             logging.info("Calculation saved to history.")
-        except (TypeError, ValueError) as e:
+        except (TypeError, ValueError) as e:  # Catch specific exceptions
             logging.error("Error saving calculation to history: %s", e)
 
     def print_history(self):
@@ -65,14 +62,13 @@ class HistoryManager:
             print("No calculation history available.")
 
     def clear_history(self):
-        try:
-            if os.path.exists(self.history_file_path):
+        if os.path.exists(self.history_file_path):
+            try:
                 os.remove(self.history_file_path)
                 logging.info("Calculation history cleared.")
                 return "cleared"
+            except (PermissionError, OSError) as e:  # Catch specific exceptions
+                logging.error("Error clearing calculation history: %s", e)
+        else:
             logging.info("No calculation history found to clear.")
-        except PermissionError as e:
-            logging.error("Permission denied to delete history file: %s", e)
-        except OSError as e:
-            logging.error("Error clearing calculation history: %s", e)
         return None
