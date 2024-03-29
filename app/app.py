@@ -15,12 +15,12 @@ class App:
         self.setup_logging()
         print("Application started")
         print("Available commands:")
-        self.logger = logging.getLogger(__name__)  # Get the logger instance
+        self.logger = logging.getLogger(__name__)
         self.command_handler = CommandHandler()
         self.load_plugins()
         self.logger.info("Application started")
         self.logger.info("Available commands:")
-        self.print_available_commands()  # Log available commands when the app starts
+        self.print_available_commands()
         print("Type 'exit' to exit.")
 
     def setup_logging(self):
