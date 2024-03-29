@@ -23,4 +23,5 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run application
-      run: python3 main.py
+      run: |
+        echo "add 1 2" | python main.py
