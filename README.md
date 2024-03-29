@@ -28,7 +28,7 @@ Once the application is running, you can interact with the calculator using the 
 
 The project utilizes several design patterns to ensure modular, scalable, and maintainable code. These include:
 
-- **Singleton Pattern**: Implemented for the `CommandHandler` class to ensure there's only one instance of the command handler throughout the application's lifecycle. 
+- **Singleton Pattern**: Implemented for the `CommandHandler` class to ensure there's only one instance of the command handler throughout the application's lifecycle.
 [Link to implementation](https://github.com/zoebrito/midterm/blob/pandas/command_handler.py)
 
 - **Factory Pattern**: Used for dynamic plugin loading and command registration in the `CommandHandler` class, allowing for easy extension of functionality. 
@@ -56,5 +56,5 @@ The project adopts both "Look Before You Leap" (LBYL) and "Easier to Ask for For
 
 ## Video Presentation and Demonstration of Program
 
-A presentation on the project itself and a walkthrough using the application. 
+A presentation on the project itself and a walkthrough using the application. Once the link is clicked, click on "View raw" to download the video to your device.
 [Demo Video](midterm_presentation.mp4)
