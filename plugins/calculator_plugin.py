@@ -43,8 +43,6 @@ class CalculatorPlugin(PluginInterface):
 
     def print_history(self, args=None):
         self.history_manager.print_history()
-        return None
 
     def clear_history(self, args=None):
         self.history_manager.clear_history()
-        return None
