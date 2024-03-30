@@ -17,3 +17,5 @@ def test_calculator_plugin_register_commands(command_handler):
     assert "subtract" in command_handler.commands
     assert "multiply" in command_handler.commands
     assert "divide" in command_handler.commands
+    assert "clear" in command_handler.commands
+    assert "history" in command_handler.commands
