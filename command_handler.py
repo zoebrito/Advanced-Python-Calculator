@@ -14,7 +14,7 @@ class CommandHandler:
         if name in self.commands:
             if args is not None:
                 return self.commands[name](args)
-            return self.commands[name]()  # Call the command without passing arguments
+            return self.commands[name]()
         return "Command not found"
 
     def get_available_commands(self):

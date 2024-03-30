@@ -9,17 +9,13 @@ from app.app import App
 
 class TestApp(unittest.TestCase):
     def test_app_start(self):
-        # Define mock input values
         mock_inputs = ["add 2 3", "subtract 5 2", "multiply 3 4", "divide 10 2", "exit"]
 
-        # Mock input function to return predefined inputs
         def mock_input(_):
             return mock_inputs.pop(0)
 
-        # Create an instance of the App class
         app = App()
 
-        # Mock the setup_logging method to manually trigger logging initialization
         with patch.object(App, 'setup_logging'):
             # Start the app and capture the output
             output = []
@@ -27,7 +23,6 @@ class TestApp(unittest.TestCase):
                 with patch('builtins.print', side_effect=lambda *args, **kwargs: output.append(" ".join(map(str, args)))):
                     app.start()
 
-        # Assertions
         expected_output = [
             "Result: 5.0",
             "Result: 3.0",
